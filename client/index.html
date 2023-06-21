@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<div id="waiting-room">
+			<button id="createRoom">Create Room</button>
+
+			<br>
+			<br>
+
+			<input id="roomInput" placeholder="Enter room code">
+			<button id="joinRoom">Join Room</button>
+	</div>
+
+	<div id="room" style='display:none'>
+		<h1 id='game-id'></h1>
+
+		<div id="game" style="display:none">
+			<button class="choice" id="rock">Rock</button>
+			<button class="choice" id="paper">Paper</button>
+			<button class="choice" id="scissors">Scissors</button>
+		</div>
+		<div id="waiting-game">
+			<h2>Waiting for another player...</h2>
+		</div>
+		<div id="waiting-choice" style="display:none">
+			<h2>Waiting for other player to choose...</h2>
+		</div>
+
+		<h2 id="result"></h2>
+	</div>
+
+	<script src="./js/index.js"></script>
+</body>
+</html>
